@@ -1,0 +1,93 @@
+body{
+	background-image: url('https://vignette.wikia.nocookie.net/lego/images/9/92/Sw_poster_1.jpg/revision/latest?cb=20111115131853');
+}
+#container{
+	width: 960px;
+  margin-top: 155px;
+}
+.chooseCharBox{
+	width: 570px;
+	height: 150px;
+	margin: 10px 0 0 10px;
+}
+.chooseCharBox img{
+	width: 100px;
+	height: 100px;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.chooseCharBox p,
+h3
+{
+	text-align: center;
+  color: white;
+}
+.chooseCharBox p1{
+	font-size: 30px;
+  color: white;
+}
+.char1{
+	margin: 0px;
+	width: 130px;
+	height: 100%;
+	border: 2px solid green;
+	float: left;
+}
+.char2
+{
+	margin: 0px;
+	width: 130px;
+	height: 100%;
+	border: 2px solid green;
+	float: left;
+}
+
+.char3{
+	margin: 0px;
+	width: 130px;
+	height: 100%;
+	border: 2px solid green;
+	float: left;
+}
+.char4
+{
+	margin: 0px;
+	width: 130px;
+	height: 100%;
+	border: 2px solid green;
+	float: left;
+}
+.char4 .starImage {
+    margin-top: 0px;
+}
+.enemiesBox{
+	width: 700px;
+	height: 200px;
+	margin-left: 10px;
+}
+.attackBtn{
+	margin-left: 10px;
+}
+.resetBtn{
+	margin-left: 10px;
+}
+.fightBox p{
+	font-size: 30px;
+	margin-left: 10px;
+}
+.defenderBox{
+	width: 700px;
+	height: 200px;
+	margin-left: 10px;
+}
+.defenderBox p {
+	margin-left: 10px;
+}
+p2{
+	text-align: center;
+}
+p{
+  color: white;
+}
