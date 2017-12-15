@@ -37,8 +37,8 @@ function choosePlayer() {
 		$('.chosen').append(this);
 		chosen = $(this).attr('id');
 
-		if (chosen == "sidious") {
-			chosen = sidious;
+		if (chosen == "maul") {
+			chosen = maul;
 		}
 		if (chosen == "luke") {
 			chosen = luke;
@@ -46,8 +46,8 @@ function choosePlayer() {
 		if (chosen == "obi") {
 			chosen = obi;
 		}
-		if (chosen == "maul") {
-			chosen = maul;
+		if (chosen == "sidious") {
+			chosen = sidious;
 		}
 		$('#chosenHealth').html(chosen.health);
 		$('.toChoose').on('click', pickEnemy);
@@ -58,8 +58,8 @@ function choosePlayer() {
 function pickEnemy (){
 		$('.toFight').append(this);
 		opponent = $(this).attr('id');
-		if (opponent == "maul") {
-			opponent = maul;
+		if (opponent == "sidious") {
+			opponent = sidious;
 		}
 		if (opponent == "obi") {
 			opponent = obi;
@@ -67,8 +67,8 @@ function pickEnemy (){
 		if (opponent == "luke") {
 			opponent = luke;
 		}
-		if (opponent == "sidious") {
-			opponent = sidious;
+		if (opponent == "maul") {
+			opponent = maul;
 		}
 		$('#opponentHealth').html(opponent.health)
 		$('.fight-info').append('<button class="btn-attack btn btn-danger">Attack</button>');
@@ -84,17 +84,13 @@ if(opponent != "undefined"){
 
 
 function attack () {
-	//opponents health = their health minus the attackPower of the user
 	opponent.health -= chosen.attackPower;
-	//opponents health = their health minus the attackPower of the chosen opponent
 	chosen.health -= opponent.counterAtk;
-	//user attack power = the attackPower plus the attackAdd
 	chosen.attackPower += chosen.attackAdd;
-	//replace the enemy's health with
 	$('.toFight .health').html(opponent.health);
 	$('.chosen .health').html(chosen.health);
 	$('.attack-info').html("You attacked " + opponent.name + " for " + chosen.attackPower);
-	$('.counter-attack-info').html("You were counter attacked by " + opponent.name + " for " + opponent.counterAtk);
+	$('.counter-attack-info').html(" counter attacked by " + opponent.name + " for " + opponent.counterAtk);
 
 	if(chosen.health < 1 || opponent.health < 1) {
 		if(chosen.health < 1) {
